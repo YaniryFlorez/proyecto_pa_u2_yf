@@ -1,11 +1,16 @@
 package com.example.demo.uce.repository;
 
+import org.springframework.stereotype.Repository;
+
 import com.example.demo.uce.modelo.Estudiante;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-
+import jakarta.persistence.TableGenerator;
+import jakarta.transaction.Transactional;
+@Transactional
+@Repository
 public class EstudianteRepoImpl implements IEstudianteRepo{
     
 	@PersistenceContext
