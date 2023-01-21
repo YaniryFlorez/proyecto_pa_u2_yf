@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import java.math.BigDecimal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -28,6 +30,9 @@ public class ProyectoPaU2YfApplication implements CommandLineRunner{
 		estu.setCedula("1234567123");
 		estu.setCiudad("Manta");
 		estu.setGenero("fem");
+		
+	
+		
 		
       this.estudianteService.crear(estu);
        
