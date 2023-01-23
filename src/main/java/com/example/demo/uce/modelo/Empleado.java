@@ -69,6 +69,4 @@ public void setFechaIngreso(LocalDateTime fechaIngreso) {
 }
 
 
-
-
 }
