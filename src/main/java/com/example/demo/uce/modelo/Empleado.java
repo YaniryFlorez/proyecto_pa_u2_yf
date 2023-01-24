@@ -32,7 +32,8 @@ private BigDecimal salario;
 @Column(name="empl_fecha_ingreso")
 private LocalDateTime fechaIngreso;
 
-@OneToOne(mappedBy ="empl_id_ciudadano" , cascade = CascadeType.ALL)
+@OneToOne
+@JoinColumn(name ="empl_id_ciudadano")
 private Ciudadano ciudadano;
 
 

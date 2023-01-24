@@ -24,18 +24,13 @@ public class Habitacion {
 	
 	@Column(name="habi_numero")   
     private String numero;
+	
 	@ManyToOne
 	@JoinColumn(name = "habi_id_hotel")
 	private Hotel hotel;
+	
 
-	public Hotel getHotel() {
-		return hotel;
-	}
-
-	public void setHotel(Hotel hotel) {
-		this.hotel = hotel;
-	}
-
+	//GET y SET
 	public Integer getId() {
 		return id;
 	}
@@ -51,6 +46,19 @@ public class Habitacion {
 	public void setNumero(String numero) {
 		this.numero = numero;
 	}
-	
+
+	public Hotel getHotel() {
+		return hotel;
+	}
+
+	public void setHotel(Hotel hotel) {
+		this.hotel = hotel;
+	}
+
+	@Override
+	public String toString() {
+		return "Habitacion [id=" + id + ", numero=" + numero + ", hotel=" + hotel + "]";
+	}
+
 	
 }

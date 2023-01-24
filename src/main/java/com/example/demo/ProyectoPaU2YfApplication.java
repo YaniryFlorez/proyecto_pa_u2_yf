@@ -10,8 +10,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.demo.uce.modelo.Ciudadano;
 import com.example.demo.uce.modelo.Empleado;
+import com.example.demo.uce.modelo.Habitacion;
+import com.example.demo.uce.modelo.Hotel;
 import com.example.demo.uce.service.ICiudadanoService;
 import com.example.demo.uce.service.IEmpleadoService;
+import com.example.demo.uce.service.IHabitacionService;
+import com.example.demo.uce.service.IHotelService;
 
 
 @SpringBootApplication
@@ -21,39 +25,64 @@ public class ProyectoPaU2YfApplication implements CommandLineRunner{
 	private IEmpleadoService empleServi;
 	@Autowired
 	private ICiudadanoService ciuSercive;
+	
+	@Autowired
+	private IHabitacionService habitacionServi;
+	
+	@Autowired
+	private IHotelService hotelServi;
+	
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoPaU2YfApplication.class, args);
 	}
     @Override
 	public void run(String...  args) throws Exception {
-		 Empleado emp= new Empleado();
-		 Ciudadano ciu= new Ciudadano();
-		
-		 ciu.setNombre("Yaniry");
-         ciu.setApellido("Florez");
-         ciu.setEmpleado(emp);
-        
-		 emp.setCiudadano(ciu);
-		 emp.setFechaIngreso(LocalDateTime.now());
-		 emp.setSalario(new BigDecimal(1000));
+		 //Empleado emp= new Empleado();
+		// Ciudadano ciu= new Ciudadano();
+		 //ciu.setNombre("Yaniry");
+        //ciu.setApellido("Florez");
+         //ciu.setEmpleado(emp);
+		// emp.setCiudadano(ciu);
+		 //emp.setFechaIngreso(LocalDateTime.now());
+		 //emp.setSalario(new BigDecimal(1000));
 		 
 		  //this.ciuSercive.crear(ciu);
-         this.empleServi.crear(emp);
+         //this.empleServi.crear(emp);
          
-		
         //Actualizar
-	/* Ciudadano encontrado=  this.ciuSercive.buscar(2);
-	 
-	 encontrado.setNombre("Luis");
-     encontrado.setApellido("Ruiz");
-     this.ciuSercive.actualizar(encontrado);  */
-          
-     //Eliminar
-     
-    
-     //∫this.ciuSercive.eliminar(6);
+	  /* Ciudadano encontrado=  this.ciuSercive.buscar(2);
+	     encontrado.setNombre("Luis");
+         encontrado.setApellido("Ruiz");
+         this.ciuSercive.actualizar(encontrado);  */
+    	
+        //Eliminar
+       //this.ciuSercive.eliminar(6);
+    	
+    	
       
+    	Hotel ho = new Hotel();
+    	Habitacion ha =new Habitacion();
+    	
+        //ingresar
+		ho.setNombre("Hitlon Colon");
+		ho.setDireccion("Qito");
+		this.hotelServi.crear(ho);
+		
+		//Actualizar
+		//Hotel hot=new Hotel();
+		//hot.setNombre("Hilton Colon");
+		//hot.setDireccion("Quito");
+	   // this.hotelServi.actualizar(hot);
+	    
+	    //buscar
+	   // this.hotelServi.buscar(1);
+	    
+	    //eliminar
+	    //this.hotelServi.eliminar(1);
+	    
+		
+    	
       
 	}
     
