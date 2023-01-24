@@ -29,19 +29,19 @@ public class ProyectoPaU2YfApplication implements CommandLineRunner{
 	public void run(String...  args) throws Exception {
 		 Empleado emp= new Empleado();
 		 Ciudadano ciu= new Ciudadano();
-		/* 
+		
 		 ciu.setNombre("Yaniry");
          ciu.setApellido("Florez");
-         //ciu.setEmpleado(emp);
+         ciu.setEmpleado(emp);
         
 		 emp.setCiudadano(ciu);
 		 emp.setFechaIngreso(LocalDateTime.now());
 		 emp.setSalario(new BigDecimal(1000));
 		 
-		  
-		 this.ciuSercive.crear(ciu);
-         this.empleServi.crear(emp);*/
+		  //this.ciuSercive.crear(ciu);
+         this.empleServi.crear(emp);
          
+		
         //Actualizar
 	/* Ciudadano encontrado=  this.ciuSercive.buscar(2);
 	 
@@ -52,7 +52,7 @@ public class ProyectoPaU2YfApplication implements CommandLineRunner{
      //Eliminar
      
     
-     this.ciuSercive.eliminar(6);
+     //∫this.ciuSercive.eliminar(6);
       
       
 	}

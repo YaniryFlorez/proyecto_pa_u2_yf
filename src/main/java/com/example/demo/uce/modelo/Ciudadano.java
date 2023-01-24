@@ -1,5 +1,8 @@
 package com.example.demo.uce.modelo;
 
+import org.springframework.boot.autoconfigure.cache.CacheType;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,7 +30,7 @@ public class Ciudadano {
 	@Column(name ="ciud_apellido")
     private String apellido;
 	
-	@OneToOne(mappedBy = "ciudadano")
+	@OneToOne(mappedBy = "ciudadano", cascade = CascadeType.ALL)
 	private Empleado empleado;
 	
 

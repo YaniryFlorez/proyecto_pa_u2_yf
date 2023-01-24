@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 
 import org.hibernate.sql.results.graph.BiDirectionalFetch;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -31,8 +32,7 @@ private BigDecimal salario;
 @Column(name="empl_fecha_ingreso")
 private LocalDateTime fechaIngreso;
 
-@OneToOne
-@JoinColumn(name ="empl_id_ciudadano")
+@OneToOne(mappedBy ="empl_id_ciudadano" , cascade = CascadeType.ALL)
 private Ciudadano ciudadano;
 
 
