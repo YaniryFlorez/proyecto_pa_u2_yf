@@ -2,6 +2,8 @@ package com.example.demo;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -61,13 +63,31 @@ public class ProyectoPaU2YfApplication implements CommandLineRunner{
     	
     	
       
-    	Hotel ho = new Hotel();
-    	Habitacion ha =new Habitacion();
+    	//Hotel ho = new Hotel();
+    	
     	
         //ingresar
-		ho.setNombre("Hitlon Colon");
+		/*ho.setNombre("Hitlon Colon");
 		ho.setDireccion("Qito");
-		this.hotelServi.crear(ho);
+		List<Habitacion> habitaciones = new ArrayList<>();
+		Habitacion ha =new Habitacion();
+		ha.setHotel(ho);
+		ha.setNumero("A01");
+		habitaciones.add(ha);
+		Habitacion ha2 =new Habitacion();
+		ha2.setHotel(ho);
+		ha2.setNumero("A02");
+		habitaciones.add(ha2);
+		Habitacion ha3 =new Habitacion();
+		ha3.setHotel(ho);
+		ha3.setNumero("A03");
+		habitaciones.add(ha3);
+		
+		ho.setHabitaciones(habitaciones);
+		this.hotelServi.crear(ho);   */
+		
+		
+		
 		
 		//Actualizar
 		//Hotel hot=new Hotel();
@@ -76,7 +96,23 @@ public class ProyectoPaU2YfApplication implements CommandLineRunner{
 	   // this.hotelServi.actualizar(hot);
 	    
 	    //buscar
-	   // this.hotelServi.buscar(1);
+	     Hotel hotelB= this.hotelServi.buscar(4);
+	     System.out.println(hotelB.getNombre());
+	     
+	     hotelB.getHabitaciones().forEach(System.out:: println);
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	    // this.habitacionServi.crear(ha);
+	    
+	    
 	    
 	    //eliminar
 	    //this.hotelServi.eliminar(1);

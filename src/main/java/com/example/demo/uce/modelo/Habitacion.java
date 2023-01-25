@@ -57,7 +57,7 @@ public class Habitacion {
 
 	@Override
 	public String toString() {
-		return "Habitacion [id=" + id + ", numero=" + numero + ", hotel=" + hotel + "]";
+		return "Habitacion [id=" + id + ", numero=" + numero + ", hotel="  + "]";
 	}
 
 	
