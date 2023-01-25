@@ -101,14 +101,7 @@ public class ProyectoPaU2YfApplication implements CommandLineRunner{
 	     
 	     hotelB.getHabitaciones().forEach(System.out:: println);
 	     
-	     
-	     
-	     
-	     
-	     
-	     
-	     
-	     
+	        
 	     
 	    // this.habitacionServi.crear(ha);
 	    
