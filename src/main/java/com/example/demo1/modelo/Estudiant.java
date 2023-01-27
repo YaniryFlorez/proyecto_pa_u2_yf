@@ -1,12 +1,17 @@
 package com.example.demo1.modelo;
 
 
+import java.util.List;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
@@ -32,21 +37,26 @@ public class Estudiant {
 	@Column(name="est_genero")
 	private String genero;
 
-	@OneToOne(mappedBy = "estudiante", cascade = CascadeType.ALL)
-	private Infcontacto infcontacto;
+	//@OneToOne(mappedBy = "estudiante", cascade = CascadeType.ALL)
+	//private Infcontacto infcontacto;
+	
+	//
+	@OneToMany(mappedBy = "estudiante", cascade =CascadeType.ALL, fetch = FetchType.EAGER )
+	private List<Matricula> matricula;
+	
 	
 	//SET GET
 
-	public Integer getId() {
-		return id;
-	}
-
-	public Infcontacto getInfcontacto() {
+	
+	/*public Infcontacto getInfcontacto() {
 		return infcontacto;
 	}
 
 	public void setInfcontacto(Infcontacto infcontacto) {
 		this.infcontacto = infcontacto;
+	}*/
+	public Integer getId() {
+		return id;
 	}
 
 	public void setId(Integer id) {
@@ -75,6 +85,20 @@ public class Estudiant {
 
 	public void setGenero(String genero) {
 		this.genero = genero;
+	}
+	
+
+	public List<Matricula> getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(List<Matricula> matricula) {
+		this.matricula = matricula;
+	}
+
+	@Override
+	public String toString() {
+		return "Estudiant [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", genero=" + genero + "]";
 	}
 
 	
