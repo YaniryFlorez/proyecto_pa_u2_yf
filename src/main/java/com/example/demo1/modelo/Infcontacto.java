@@ -32,7 +32,7 @@ public class Infcontacto {
 	
 	@OneToOne
 	@JoinColumn(name ="est_id_contacto")
-	private Estudiante estudiante;
+	private Estudiant estudiant;
 
 	public Integer getId() {
 		return id;
@@ -66,12 +66,12 @@ public class Infcontacto {
 		this.direccion = direccion;
 	}
 
-	public Estudiante getEstudiante() {
-		return estudiante;
+	public Estudiant getEstudiante() {
+		return estudiant;
 	}
 
-	public void setEstudiante(Estudiante estudiante) {
-		this.estudiante = estudiante;
+	public void setEstudiante(Estudiant estudiant) {
+		this.estudiant = estudiant;
 	}
 
 	

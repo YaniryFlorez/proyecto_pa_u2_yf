@@ -14,7 +14,7 @@ import jakarta.transaction.Transactional;
 
 @Entity
 @Table(name="estudiante")
-public class Estudiante {
+public class Estudiant {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "estu_seq")

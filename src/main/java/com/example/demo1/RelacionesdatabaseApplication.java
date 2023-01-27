@@ -5,7 +5,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.demo1.modelo.Estudiante;
+import com.example.demo1.modelo.Estudiant;
 import com.example.demo1.modelo.Infcontacto;
 import com.example.demo1.service.IEstudianteServi;
 import com.example.demo1.service.IInfcontactoServi;
@@ -27,23 +27,21 @@ public class RelacionesdatabaseApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		Estudiante estu =new Estudiante();
+		Estudiant estu =new Estudiant();
 		Infcontacto infc = new Infcontacto();
 		
 		//estu.setInfcontacto(infc);
 		//infc.setEstudiante(estu);
 		
-		Estudiante modi =this.estudianteServi.buscar(3);
+		/*Estudiant modi =this.estudianteServi.buscar(3);
 		modi.setNombre("Yaniry");
 		modi.setApellido("Flores");
-		modi.setGenero("Femenino");
+		modi.setGenero("Femenino");*/
 		
 		
 		//this.estudianteServi.crear(estu);
 		
-		this.estudianteServi.actualizar(modi);
-		
-		
+		//this.estudianteServi.actualizar(modi);
 		
 		//this.estudianteServi.borrar(1);
 
