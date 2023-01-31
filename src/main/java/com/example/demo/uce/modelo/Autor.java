@@ -2,6 +2,7 @@ package com.example.demo.uce.modelo;
 
 import java.util.Set;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,10 +23,11 @@ public class Autor {
 
 	@Column(name="aut_id")
 	private Integer id;
+	
 	@Column(name="aut_nombre")
 	private String nombre;
 	
-	@ManyToMany(mappedBy = "autores")
+	@ManyToMany(mappedBy = "autores" ,cascade =CascadeType.DETACH)
 	private Set<Libro> libros;
 	
 	

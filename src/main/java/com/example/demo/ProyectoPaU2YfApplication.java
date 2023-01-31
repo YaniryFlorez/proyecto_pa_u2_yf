@@ -14,16 +14,21 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.demo.uce.modelo.Autor;
 import com.example.demo.uce.modelo.Ciudadano;
+import com.example.demo.uce.modelo.Cliente;
 import com.example.demo.uce.modelo.Empleado;
 import com.example.demo.uce.modelo.Habitacion;
 import com.example.demo.uce.modelo.Hotel;
 import com.example.demo.uce.modelo.Libro;
+import com.example.demo.uce.modelo.Vehiculo;
 import com.example.demo.uce.repository.ILibroRepo;
 import com.example.demo.uce.service.IAutorServi;
 import com.example.demo.uce.service.ICiudadanoService;
+import com.example.demo.uce.service.IClienteServi;
 import com.example.demo.uce.service.IEmpleadoService;
 import com.example.demo.uce.service.IHabitacionService;
 import com.example.demo.uce.service.IHotelService;
+import com.example.demo.uce.service.ILibroServi;
+import com.example.demo.uce.service.IVehiculoServi;
 
 
 @SpringBootApplication
@@ -42,6 +47,17 @@ public class ProyectoPaU2YfApplication implements CommandLineRunner{
 	
 	@Autowired
 	private IAutorServi autorServi;
+	
+	@Autowired
+	private ILibroServi libroServi;
+	
+	@Autowired
+	private IVehiculoServi vehiculoServi;
+	
+	@Autowired
+	private IClienteServi clienteServi;
+	
+	
 	
 
 
@@ -121,16 +137,19 @@ public class ProyectoPaU2YfApplication implements CommandLineRunner{
 	    //this.hotelServi.eliminar(1);
 	    
 		// LIBRO AUTOR
-    	
+    	/*
     	Autor autor = new Autor();
-    	Autor autor2 = new Autor();
-    	Autor autor3 = new Autor();
-    	Autor autor4 = new Autor();
-    	
     	autor.setNombre("WS");
+    	
+    	Autor autor2 = new Autor();
     	autor2.setNombre("WY");
+    	
+    	Autor autor3 = new Autor();
     	autor3.setNombre("JS");
+    	
+    	Autor autor4 = new Autor();
     	autor4.setNombre("OM");
+    	
     	
     	Libro libro = new Libro();
     	Libro libro2 = new Libro();
@@ -163,7 +182,54 @@ public class ProyectoPaU2YfApplication implements CommandLineRunner{
     	
     	libro.setAutores(autores);
     	libro2.setAutores(autores2);
-    	this.autorServi.crear(autor);
+    	this.autorServi.crear(autor); */
+    	
+    	//VEHICULO CLIENTE
+    	
+    Cliente cli1 = new Cliente();
+    Cliente cli2 = new Cliente();
+    Cliente cli3 = new Cliente();
+   
+    cli1.setCedula("123");
+    cli1.setNombre("Ana");
+    cli1.setApellido("Lopez");
+    cli1.setTelefono("1298776");
+    
+    cli2.setCedula("124");
+    cli2.setNombre("Luis");
+    cli2.setApellido("Llanos");
+    cli2.setTelefono("9864343");
+    
+    cli3.setCedula("125");
+    cli3.setNombre("Marco");
+    cli3.setApellido("Dias");
+    cli3.setTelefono("284537");
+    	
+    	
+    	
+    	Vehiculo veh1 = new Vehiculo();
+    	Vehiculo veh2 = new Vehiculo();
+    	
+    	veh1.setModelo("2015");
+    	veh1.setPlaca("123AB");
+    	veh1.setPrecio(new BigDecimal(12000));
+    	veh1.setTipo("Campero");
+    	
+    	veh1.setModelo("2022");
+    	veh1.setPlaca("113AC");
+    	veh1.setPrecio(new BigDecimal(20000));
+    	veh1.setTipo("Automovil");
+    	
+    	
+    	
+    	Set<Cliente> clientes = new HashSet<>();
+    	Set<Cliente> clientes2 = new HashSet<>();
+    	
+    	Set<Libro> vehiculo = new HashSet<>();
+    	Set<Libro> vehiculo2 = new HashSet<>();
+    	Set<Libro> vehiculo3 = new HashSet<>(); 
+    	
+    	
  
     	
   
