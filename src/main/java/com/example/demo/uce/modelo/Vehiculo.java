@@ -1,4 +1,4 @@
-package com.example.demo.uce.modelo;
+ package com.example.demo.uce.modelo;
 
 import java.math.BigDecimal;
 

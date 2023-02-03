@@ -229,11 +229,7 @@ public class ProyectoPaU2YfApplication implements CommandLineRunner{
     	Set<Libro> vehiculo2 = new HashSet<>();
     	Set<Libro> vehiculo3 = new HashSet<>(); 
     	
-    	
- 
-    	
-  
-    	
+    		
       
 	}
     
